@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+/* Investigation Detective Theme Custom Animations and Textures */
+
+/* Background wood desk texture */
+.desk-wood {
+  background-color: #17100b;
+  background-image: 
+    radial-gradient(ellipse at center, rgba(139, 90, 43, 0.15) 0%, rgba(23, 16, 11, 0.95) 100%),
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(0, 0, 0, 0.15) 40px, rgba(0, 0, 0, 0.15) 80px),
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: cover;
+}
+
+/* Lined investigation report notebook sheet style */
+.notebook-sheet {
+  background-color: #faf6eb !important;
+  background-image: linear-gradient(rgba(180, 207, 233, 0.5) 1px, transparent 1px) !important;
+  background-size: 100% 2.2rem !important;
+  line-height: 2.2rem !important;
+  font-family: inherit;
+  box-shadow: 
+    0 1px 1px rgba(0,0,0,0.1), 
+    0 10px 0 -5px #f4edd9, 
+    0 10px 1px -4px rgba(0,0,0,0.15), 
+    0 20px 0 -10px #eadfaf, 
+    0 20px 1px -9px rgba(0,0,0,0.15), 
+    0 30px 20px rgba(0,0,0,0.3);
+}
+
+/* Vintage burned sepia paper/magazine styling */
+.burnt-newspaper {
+  background-color: #ecdca5;
+  background-image: 
+    radial-gradient(circle at 30% 20%, rgba(220,186,115,0.15) 0%, transparent 60%),
+    radial-gradient(circle at 80% 70%, rgba(139,94,26,0.2) 0%, rgba(76,51,14,0.45) 100%);
+  border: 1px solid rgba(139, 94, 26, 0.4);
+  box-shadow: 
+    inset 0 0 40px rgba(76,51,14,0.3),
+    0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+/* Floating particle dust style for Night Shrapnel */
+@keyframes night-glowing-float {
+  0% {
+    transform: translateY(100vh) translateX(0) scale(1) rotate(0deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-20vh) translateX(50px) scale(0.6) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.shrapnel-particle {
+  position: absolute;
+  bottom: -40px;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.6) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Floating animations for investigative props */
+@keyframes gently-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+
+@keyframes gently-float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-3deg);
+  }
+}
+
+.prop-floating-left {
+  animation: gently-float 6s ease-in-out infinite;
+}
+
+.prop-floating-right {
+  animation: gently-float-reverse 7s ease-in-out infinite;
+}
+
+/* Red Margin Line for notebooks */
+.notebook-margin-line {
+  position: absolute;
+  right: 4rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: rgba(239, 68, 68, 0.3);
+  pointer-events: none;
+}
+
+/* Premium Rustic Parchment Sheet Styling with warm fibrous paper texture */
+.parchment-sheet {
+  background-color: #f7f2e5 !important;
+  background-image: 
+    radial-gradient(ellipse at center, rgba(255, 255, 255, 0.75) 0%, rgba(243, 233, 203, 0.3) 100%),
+    repeating-linear-gradient(45deg, rgba(84, 58, 25, 0.015) 0px, rgba(84, 58, 25, 0.015) 1px, transparent 1px, transparent 12px),
+    repeating-linear-gradient(-45deg, rgba(84, 58, 25, 0.015) 0px, rgba(84, 58, 25, 0.015) 1px, transparent 1px, transparent 12px);
+  box-shadow: 
+    inset 0 0 50px rgba(115, 80, 36, 0.22),
+    0 16px 24px -8px rgba(0, 0, 0, 0.5),
+    0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  border: 4px solid #4a3319 !important;
+  position: relative;
+}
+
